@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 * {
   box-sizing: border-box; }
 
 body {
   font-family: 'Muli', sans-serif;
   font-weight: 100;
-  height: 100vh;
   overflow: hidden;
   margin: 0; }
 
@@ -35,6 +34,6 @@ nav {
   justify-self: flex-start;
   align-self: start; }
   nav p {
-    font-family: 'Monoton', cursive;
-    font-size: 2rem;
-    text-transform: uppercase; }
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+    font-size: 1.5rem; }
