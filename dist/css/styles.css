@@ -6,37 +6,46 @@
 body {
   font-family: 'Muli', sans-serif;
   font-weight: 100;
+  height: 100%;
   margin: 0;
-  background-color: #A4C4B5; }
+  background: #94bbe9;
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  display: flex;
+  justify-content: center;
+  align-content: center; }
 
 .container {
-  margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
   align-items: center;
   justify-content: center;
-  align-content: center;
   width: 100vw;
-  max-width: 1280px;
-  height: 100%;
-  flex-direction: row; }
+  max-width: 960px;
+  height: 100vh;
+  min-height: 100vh; }
 
 .split {
+  padding: 50px;
   display: flex;
   justify-items: center;
   align-items: center;
   min-width: 350px;
-  height: 100vh; }
+  min-height: 90vh; }
 
 .split.about {
+  background-color: rgba(0, 0, 0, 0.2);
   width: 50%;
   max-width: 100%;
-  height: 100%; }
+  height: 80vh;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
 
 .split.auth {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   width: 50%;
   max-width: 100%;
-  background-color: #D2E0C5;
-  box-shadow: 2px 2px 5px #D2E0C5,  -2px -2px 5px #A4C4B5;
-  height: 90vh;
-  border-radius: 5px; }
+  background-color: #fff;
+  height: 80vh; }
