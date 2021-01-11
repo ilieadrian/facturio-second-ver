@@ -6,10 +6,14 @@ body {
     font-family: 'Muli', sans-serif;
     margin: 0;
     height: 100vh;
-    padding: 20px;
+    padding: 10px;
     background: rgba(148,187,233,1);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);           
     display: flex;
+}
+
+li {
+    list-style: none;
 }
 
 body > div {
@@ -24,12 +28,10 @@ body > div {
     align-items: center;
     width: 1280px; //or 960px
     min-width: 350px;
-    height: 60vh;
+    height: 80vh;
     min-height: 350px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-
-
 
 .split {
     display: flex;
@@ -42,16 +44,40 @@ body > div {
 }
 
 .split.about {
+    position: relative;
+    // display: block;
     flex: 1;
-    background-color: rgba( #000000, 0.6);
     color: #fff;
-
+    background-color: rgba( #000000, 0.7)
 }
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba( #000000, 0.6);
+    display: flex;
+}
+
+.img-container {
+    background: url('../images/split-bg.jpg')no-repeat center center/cover ;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+};
 
 .split.auth  {
     flex: 1;
     background-color:  #fff;
 }
+
+
 
 //media queries
 @media only screen and (max-width: 740px) {
