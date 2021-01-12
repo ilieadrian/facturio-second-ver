@@ -1,19 +1,22 @@
+@import 'config';
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     height: 100vh;
     padding: 10px;
     background: rgba(148,187,233,1);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);           
+    background: $index-bg-gradient;           
     display: flex;
 }
 
 li {
     list-style: none;
+    display: inline-block;
 }
 
 body > div {
@@ -26,11 +29,12 @@ body > div {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: 1280px; //or 960px
-    min-width: 350px;
+    min-width: 280px;
     height: 80vh;
     min-height: 350px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: $main-box-shadow;
 }
 
 .split {
@@ -44,22 +48,63 @@ body > div {
 }
 
 .split.about {
+    justify-content: space-between;
+    padding-top:0;
     position: relative;
-    // display: block;
     flex: 1;
     color: #fff;
-    background-color: rgba( #000000, 0.7)
+    background-color: rgba( #000000, 0.3)
 }
 
+.about {
+    .content {
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 10rem;
+    }
+}
+
+//Index about section navigation setup
 nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    width: calc(100% + 20px);
     background-color: rgba( #000000, 0.6);
     display: flex;
+
+    h2 {
+    
+        padding-left: 2rem;
+        font-family: 'Suranna', serif;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: $main-color;
+    }
+    h2,ul {
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        li {
+            padding: 0 10px;
+            a {
+                font-weight:700;
+                color: #fff;
+                text-decoration: none;
+
+                &:hover  {
+                    color: $main-color;
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid $main-color;
+                }
+            }
+        }
+    }
 }
 
 .img-container {
@@ -77,8 +122,6 @@ nav {
     background-color:  #fff;
 }
 
-
-
 //media queries
 @media only screen and (max-width: 740px) {
     
@@ -89,5 +132,4 @@ nav {
     .split {
         height: 50%;
     }
-    
 }
